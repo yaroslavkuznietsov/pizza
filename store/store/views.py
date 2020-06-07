@@ -26,15 +26,15 @@ def query_dict_to_dict(query_dict):
     """
 
     temp_dict = query_dict.dict()
-    print(temp_dict)
-    print(f" pizza: {temp_dict.get('pizza')}")
-    print(f" quantity: {temp_dict.get('quantity')}")
-    print(f" size: {temp_dict.get('size')}")
+    # print(temp_dict)
+    # print(f" pizza: {temp_dict.get('pizza')}")
+    # print(f" quantity: {temp_dict.get('quantity')}")
+    # print(f" size: {temp_dict.get('size')}")
 
     temp_order = Order()
-    temp_order.address = '111'
-    temp_order.phone = '222'
-    temp_order.comments = '333'
+    temp_order.address = temp_dict.get('address')
+    temp_order.phone = temp_dict.get('phone')
+    temp_order.comments = temp_dict.get('comments')
     temp_order.save()
     # Order.objects.create(address=temp_order.address, phone=temp_order.phone, comments=temp_order.comments)
 
